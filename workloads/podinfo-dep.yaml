@@ -33,7 +33,7 @@ spec:
         - "1"
       containers:
       - name: hello
-        image: tareq/hello:1.0.1
+        image: tareq/hello:1.0.2
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 3000
