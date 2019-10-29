@@ -2,14 +2,14 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: podinfo
+  name: hello
   namespace: demo
   labels:
-    app: podinfo
+    app: hello
   annotations:
     fluxcd.io/automated: "true"
     fluxcd.io/tag.init: regex:^3.10.*
-    fluxcd.io/tag.podinfod: semver:~1.0
+    fluxcd.io/tag.hello: semver:~1.0
 spec:
   strategy:
     rollingUpdate:
@@ -17,13 +17,13 @@ spec:
     type: RollingUpdate
   selector:
     matchLabels:
-      app: podinfo
+      app: hello
   template:
     metadata:
       annotations:
         prometheus.io/scrape: "true"
       labels:
-        app: podinfo
+        app: hello
     spec:
       initContainers:
       - name: init
@@ -32,7 +32,7 @@ spec:
         - sleep
         - "1"
       containers:
-      - name: podinfod
+      - name: hello
         image: tareq/hello:1.0.0
         imagePullPolicy: IfNotPresent
         ports:
