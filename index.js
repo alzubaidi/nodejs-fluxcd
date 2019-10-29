@@ -12,7 +12,7 @@ app.get('/readyz', (req, res) => {
 });
 
 app.get('/*', (req, res) => {
-  res.send(`<2>Hello World!</h2><h4>We got ${process.env.PODINFO_UI_MESSAGE}</h4>`);
+  res.send(`<2>Hello World!</h2><h4>We got "${process.env.PODINFO_UI_MESSAGE}"</h4>`);
 });
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))
