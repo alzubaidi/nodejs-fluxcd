@@ -22,3 +22,5 @@ node_modules/
 **/values.dev.yaml
 LICENSE
 README.md
+workloads/
+namespaces/
