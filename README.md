@@ -4,7 +4,7 @@
 - Spin [minikube](https://minikube.sigs.k8s.io/docs/start/) cluster
 - Create namespace called "demo"
   - `kubectl create namespace demo`
-- Setup [fluxcd](https://docs.fluxcd.io/en/1.17.0/tutorials/get-started.html) on your local cluster.
+- Setup [fluxcd](https://fluxcd.io/flux/get-started) on your local cluster.
     - In my case it was:
       ```
       export GHUSER="alzubaidi" # replace with your github username
